@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio juridico los Q </title>
+    <title>Convertidor de Divisas</title>
 </head>
 <body>
-    <script>
-        ("hola mundo")
-    </script>
-    
+
+<h1>Convertidor de Divisas</h1>
+
+<label for="usdInput">Ingrese la cantidad en USD:</label>
+<input type="number" id="usdInput" placeholder="Ingrese la cantidad en USD">
+
+<button onclick="convertirDivisa()">Convertir a EUR</button>
+
+<p id="resultado"></p>
+
+<script>
+    function convertirDivisa() {
+        const usd = document.getElementById("usdInput").value;
+        const tasaCambio = 0.85; // Tasa de cambio USD a EUR
+
+        const euros = usd * tasaCambio;
+        
+        document.getElementById("resultado").innerHTML = ${usd} USD son ${euros} EUR;
+    }
+</script>
+
 </body>
 </html>
